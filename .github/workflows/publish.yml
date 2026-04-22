@@ -2,12 +2,13 @@ name: Publish Modules to GitHub Packages
 
 on:
   push:
-    branches: [ main ]
-  workflow_dispatch:   # allows manual trigger from GitHub UI
+    tags:
+      - 'v*'               # trigger only on version tags: v1.0.0, v1.2.3, etc.
+  workflow_dispatch:       # allow manual trigger from GitHub UI
 
 jobs:
   publish:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest  # macOS required to compile iOS targets (iosArm64, iosSimulatorArm64)
 
     steps:
       - name: Checkout
