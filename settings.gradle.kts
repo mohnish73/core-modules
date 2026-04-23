@@ -25,6 +25,7 @@ dependencyResolutionManagement {
                 includeGroupAndSubgroups("androidx")
                 includeGroupAndSubgroups("com.android")
                 includeGroupAndSubgroups("com.google")
+                includeGroupAndSubgroups("org.jetbrains.androidx")
             }
         }
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev") {
