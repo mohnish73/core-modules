@@ -51,7 +51,6 @@ include(":core:storage")
 include(":cmp:ui-components")
 include(":cmp:themes")
 include(":cmp:design-system")
-include(":cmp:navigation")
 include(":cmp:animations")
 
 // ── Service modules ───────────────────────────────────────────────────────────

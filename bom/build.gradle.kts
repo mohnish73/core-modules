@@ -24,8 +24,7 @@ dependencies {
         api("$sdkGroup:cmp-ui-components:$sdkVersion")
         api("$sdkGroup:cmp-themes:$sdkVersion")
         api("$sdkGroup:cmp-design-system:$sdkVersion")
-        api("$sdkGroup:cmp-navigation:$sdkVersion")
-        api("$sdkGroup:cmp-animations:$sdkVersion")
+api("$sdkGroup:cmp-animations:$sdkVersion")
         // Service
         api("$sdkGroup:service-analytics:$sdkVersion")
         api("$sdkGroup:service-crashlytics:$sdkVersion")
