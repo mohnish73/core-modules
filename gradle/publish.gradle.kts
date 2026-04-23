@@ -21,3 +21,15 @@ configure<PublishingExtension> {
         }
     }
 }
+
+// GitHub Packages Maven does not support .klib artifacts (Kotlin/Native iOS targets)
+// and returns 422 Unprocessable Entity for them. Disable all iOS target publications
+// to GitHub Packages — the root kotlinMultiplatform metadata publication is sufficient
+// for Android/KMP consumers resolving via Gradle.
+afterEvaluate {
+    tasks.withType<PublishToMavenRepository>().configureEach {
+        if (repository.name == "GitHubPackages" && publication.name.startsWith("ios")) {
+            enabled = false
+        }
+    }
+}
